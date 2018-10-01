@@ -1,0 +1,9 @@
+// In web browsers, the window object is also the global object:
+console.log(this === window); // true
+
+a = 37;
+console.log(window.a); // 37
+
+this.b = "dummy text";
+console.log(window.b) // "dummy text"
+console.log(b) // "dummy text"

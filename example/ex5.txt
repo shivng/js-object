@@ -1,0 +1,21 @@
+  // Create a object with method
+  var person = {
+      firstName: "John",
+      lastName: "Doe",
+      age: 50,
+      eyeColor: "blue",
+      fullName: function () {
+          return this.firstName + " " + this.lastName;
+      }
+  };
+
+  // Add a method in object
+  person.getCapName = function () {
+      return this.firstName.toUpperCase();
+  }
+
+  // Delete a method from object
+  delete person.fullName;
+
+  // Get and call method from object
+  person.getCapName();

@@ -1,0 +1,11 @@
+// Using a string method doesn't mutate the string
+var test = "mystring";
+console.log(test);               // mystring
+test.toUpperCase();
+console.log(test);               // mystring
+
+// Using an array method mutates the array
+var myarr = [];
+console.log(myarr);               // []
+myarr.push("plugh");
+console.log(myarr);               // ["plugh"]

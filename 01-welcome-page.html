@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Hello, world!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+  <div class="container flex" id="group">
+    <section>
+      <h1>Objects in Real Life</h1>
+      <div class="article">
+        <p>In real life, a car is an <b>object</b>.</p>
+        <p>A car has <b>properties</b> like weight and color, and <b>methods</b> like start and stop:</p>
+        <div class="mb-20">&nbsp;</div>
+        <div class="row">
+            <div class="col-4">
+              <h2>Object</h2>
+              <img src="images/objectExplained.png" alt="img">
+            </div>
+            <div class="col-4">
+             <h2>Properties</h2>
+             <p>car.name = Fiat</p>
+             <p>car.model = 500</p>
+             <p>car.weight = 850kg</p>
+             <p>car.color = white</p>
+            </div>
+            <div class="col-4">
+              <h2>Methods</h2>
+              <p>car.start()</p>
+              <p>car.drive()</p>
+              <p>car.brake()</p>
+              <p>car.stop()</p>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h1>Why we need to learn JS object</h1>
+      <div class="article">
+        <p>In JavaScript, objects penetrate almost every aspect of the language. So we must understand them first before going in-depth anywhere else.<p>
+        <p>In JavaScript, almost "everything" is an object.</p>
+        <p>Ex:</p>
+        <ul>
+          <li><b>Dates</b></li>
+          <li><b>Maths</b></li>
+          <li><b>Arrays</b></li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h1>Introduction about JS Object</h1>
+      <div class="article">
+        <p>Objects are <b>mutable</b>: They are addressed by reference, not by value.</p>
+        <p>Objects are <b>non primitive</b>.</p>
+        <p>There are 6 primitive data types:</p>
+        <ul>
+          <li>string</li>
+          <li>number</li>
+          <li>boolean</li>
+          <li>null</li>
+          <li>undefined</li>
+          <li>symbol</li>
+        </ul>
+        <p>All primitives are <b>immutable</b>.</p>
+        <p>This example would help you understand the fact that primitive values are immutable.</p>
+        <img src="images/ex1.png" alt="ex1">
+        <img class="mt-30" src="images/Screenshot_20180816-214217.png" alt="Screenshot">
+      </div>
+    </section>
+    <section>
+      <h1>Creating a JavaScript Object</h1>
+      <div class="article">
+        <p>There are two way to create object</p>
+        <ul>
+          <li>Using an Object Literal</li>
+          <li>Using the JavaScript Keyword new (You can also say using constructor)</li>
+        </ul>
+        <img src="images/ex2.png" alt="ex2">
+        <h2 class="mt-30">Object literal</h2>
+        <p class="mt-30">An object can be written as a name:value pair, separate by colon(:)</p>
+        <p>Using an object literal - {} notation you can create a plain object:</p>
+        <img src="images/ex3.png" alt="img">
+      </div>
+    </section>
+    <section>
+      <h1>Let's Create a object <span>(Using Object Literal)</span></h1>
+      <div class="article">
+        <img src="images/ex4.png" alt="ex4">
+        <img src="images/ex4-output.png" alt="ex4" width="100%">
+      </div>
+    </section>
+    <section>
+      <h1>Create/Add/Get Method in Object</h1>
+      <div class="article">
+        <img src="images/ex5.png" alt="ex5">
+        <h2 class="mt-30">Other Approach</h2>
+        <img class="mt-30" src="images/ex5a.png" alt="ex5a">
+        <h2 class="mt-30">this keyword</h2>
+        <p class="mt-30">In most cases, the value of <b>this</b> is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called.</p>
+        <h4 class="mt-30">In Global Context</h4>
+        <p>In the global execution context (outside of any function), this refers to the global</p>
+        <img src="images/ex6.png" alt="ex6">
+        <h4 class="mt-30">In Object Context</h4>
+        <img src="images/ex7.png" alt="ex7">
+        <h4 class="mt-30">In Function Context</h4>
+        <img src="images/ex8.png" alt="ex8">
+      </div>
+    </section>
+    <section>
+      <h1>Multiword Key (Square brackets)</h1>
+      <div class="article">
+        <p>We can also use multiword property names, but then they must be quoted:</p>
+        <img src="images/ex9.png" alt="ex9">
+        <h2 class="mt-30">Square brackets</h2>
+        <p class="mt-30">For multiword properties, the dot access doesn’t work:</p>
+        <img src="images/ex10.png" alt="ex10">
+        <p class="mt-30">There’s an alternative “square bracket notation” that works with any string:</p>
+        <img src="images/ex11.png" alt="ex11">
+      </div>
+    </section>
+    <section>
+      <h1>Computed properties</h1>
+      <div class="article">
+        <p>We can use square brackets in an object literal. That’s called computed properties.</p>
+        <p>For instance:</p>
+        <img src="images/ex11.png" alt="ex11">
+        <p class="mt-30">We can use more complex expressions inside square brackets:</p>
+        <img src="images/ex12.png" alt="ex12" width="100%">
+      </div>
+    </section>
+    <section>
+      <h1>Reserved words are allowed as property names</h1>
+      <div class="article">
+        It is with great joy and excitement that I re-launch Hallewood! For those of you who used to groove with me back in the day, I proudly invite you back. For those of you who will be new to the club, I happily welcome you! Hallewood will be a place we get to know each other through exclusive content you can only find here. You'll be able to dive into my world of style, health, beauty, charity, and so much more!
+      </div>
+    </section>
+    <section>
+      <h1>Heading 3</h1>
+      <div class="article">
+        It is with great joy and excitement that I re-launch Hallewood! For those of you who used to groove with me back in the day, I proudly invite you back. For those of you who will be new to the club, I happily welcome you! Hallewood will be a place we get to know each other through exclusive content you can only find here. You'll be able to dive into my world of style, health, beauty, charity, and so much more!
+      </div>
+    </section>
+    <section>
+      <h1>Heading 3</h1>
+      <div class="article">
+        It is with great joy and excitement that I re-launch Hallewood! For those of you who used to groove with me back in the day, I proudly invite you back. For those of you who will be new to the club, I happily welcome you! Hallewood will be a place we get to know each other through exclusive content you can only find here. You'll be able to dive into my world of style, health, beauty, charity, and so much more!
+      </div>
+    </section>
+    <section>
+      <h1>Heading 3</h1>
+      <div class="article">
+        It is with great joy and excitement that I re-launch Hallewood! For those of you who used to groove with me back in the day, I proudly invite you back. For those of you who will be new to the club, I happily welcome you! Hallewood will be a place we get to know each other through exclusive content you can only find here. You'll be able to dive into my world of style, health, beauty, charity, and so much more!
+      </div>
+    </section>
+    <section>
+      <h1>Heading 3</h1>
+      <div class="article">
+        It is with great joy and excitement that I re-launch Hallewood! For those of you who used to groove with me back in the day, I proudly invite you back. For those of you who will be new to the club, I happily welcome you! Hallewood will be a place we get to know each other through exclusive content you can only find here. You'll be able to dive into my world of style, health, beauty, charity, and so much more!
+      </div>
+    </section>
+  </div>
+
+
+  <a href="javascript:void(0)" id="next">next</a>
+  <a href="javascript:void(0)" id="prev">prev</a>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="js/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+  <script type="text/javascript">
+    function updateItems(delta) {
+      var $items = $('#group').children();
+      var $current = $items.filter('.current');
+      $current = $current.length ? $current : $items.first();
+      var index = $current.index() + delta;
+      // Range check the new index
+      index = (index < 0) ? 0 : ((index > $items.length) ? $items.length : index);
+      $current.removeClass('current');
+      $current = $items.eq(index).addClass('current');
+      // Hide/show the next/prev
+      $("#prev").toggle(!$current.is($items.first()));
+      $("#next").toggle(!$current.is($items.last()));
+    }
+    $("#next").click(function () {
+      updateItems(1);
+    });
+    $("#prev").click(function () {
+      updateItems(-1);
+    });
+    // Cause initial selection
+    updateItems(7);
+  </script>
+
+
+</body>
+</html>
+
+
+
+
+
+

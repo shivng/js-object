@@ -1,0 +1,16 @@
+  // Create a object
+  var person = {
+    firstName:"John",
+    lastName:"Doe",
+    age:50,
+    eyeColor:"blue"
+  };
+
+  // Add a property in object
+  person.mobileNumber = 8750414678;
+
+  // Delete a property from object
+  delete person.eyeColor;
+
+  // Get a property from object
+  console.log(person.age);

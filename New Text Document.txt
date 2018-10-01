@@ -1,0 +1,242 @@
+
+There are 6 primitive data types: string, number, boolean, null, undefined, symbol
+All primitives are immutable
+
+This example would help you understand the fact that primitive values are immutable.
+
+// Using a string method doesn't mutate the string
+var bar = "baz";
+console.log(bar);               // baz
+bar.toUpperCase();
+console.log(bar);               // baz
+
+// Using an array method mutates the array
+var foo = [];
+console.log(foo);               // []
+foo.push("plugh");
+console.log(foo);               // ["plugh"]
+
+
+
+Why we need to learn JS object
+
+In JavaScript, objects penetrate almost every aspect of the language. So we must understand them first before going in-depth anywhere else.
+
+
+Introduction about JS Object
+
+* In JavaScript, almost "everything" is an object.
+* Objects are mutable: They are addressed by reference, not by value.
+* Objects are non primitive
+
+
+
+
+Creating a JavaScript Object
+
+ * Using an Object Literal
+ * Using the JavaScript Keyword new (You can also say using constructor)
+
+
+
+  var user = {};  // "object literal" syntax
+  var user = new Object(); // "object constructor" syntax
+
+
+
+
+
+
+  Object literal
+
+  An object can be written as a name:value pair, separate by colon(:)
+
+  Using an object literal - {} notation you can create a plain object:
+
+  var objectName = {}
+
+  Ex:
+  var user = {     // an object
+    name: "John",  // by key "name" store value "John"
+    age: 30        // by key "age" store value 30
+  };
+
+  // Check type:
+  console.log(typeof user);        // object
+
+
+  Let's Create a object using an Object Literal
+
+  // Create a object
+  var person = {
+    firstName:"John",
+    lastName:"Doe",
+    age:50,
+    eyeColor:"blue",
+    fullName : function() {
+      return this.firstName + " " + this.lastName;
+    }
+  };
+
+  // Add a method in object
+  person.getCapName = function() {
+    return this.firstName.toUpperCase();
+  }
+
+  // Delete a property from object
+  delete person.fullName;
+
+  // Get a property from object
+  person.getCapName();
+
+
+
+  // Add a property in object
+  person.mobileNumber = 8750414678;
+
+  // Delete a property from object
+  delete person.eyeColor;
+
+  // Get a property from object
+  console.log(person.age);
+
+
+  var person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue",
+  };
+
+  for(let key in person) {
+    // keys
+    alert( key );  // name, age, isAdmin
+    // values for the keys
+    alert( person[key] ); // John, 30, true
+  }
+
+
+  The “for…in” loop
+  let user = {
+    name: "John",
+    age: 30,
+    isAdmin: true
+  };
+
+  for(let key in user) {
+    // keys
+    alert( key );  // name, age, isAdmin
+    // values for the keys
+    alert( user[key] ); // John, 30, true
+  }
+
+
+  Copying by reference
+
+  Accessing Object Properties
+
+  The this Keyword
+
+  var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function() {
+        return this.firstName + " " + this.lastName;
+    }
+  };
+
+
+
+  We can also use multiword property names, but then they must be quoted:
+
+  let user = {
+    name: "John",
+    age: 30,
+    "likes birds": true  // multiword property name must be quoted
+  };
+
+
+  Square brackets
+
+  For multiword properties, the dot access doesn’t work:
+
+  let user = {
+    name: "John",
+    age: 30,
+  }
+
+  // this would give a syntax error
+  user.likes birds = true
+
+  // set
+  user["likes birds"] = true;
+
+  // get
+  alert(user["likes birds"]); // true
+
+  // delete
+  delete user["likes birds"];
+
+
+
+  Reserved words are allowed as property names
+
+  A variable cannot have a name equal to one of language-reserved words like “for”, “let”, “return” etc.
+  But for an object property, there’s no such restriction. Any name is fine:
+
+  let obj = {
+    for: 1,
+    let: 2,
+    return: 3
+  }
+
+  alert( obj.for + obj.let + obj.return );  // 6
+
+
+
+  Existence check
+
+  let user = {};
+
+  alert( user.noSuchProperty === undefined ); // true means "no such property"
+
+
+
+
+  "key" in object
+
+  let user = { name: "John", age: 30 };
+
+  alert( "age" in user ); // true, user.age exists
+  alert( "blabla" in user ); // false, user.blabla doesn't exist
+
+
+  Please note that on the left side of in there must be a property name. That’s usually a quoted string.
+
+  let user = { age: 30 };
+
+  let key = "age";
+  alert( key in user ); // true, takes the name from key and checks for such property
+
+
+
+
+
+
+
+
+  Accessing Object Methods
+
+  objectName.methodName()
+
+
+
+  using constructor
+  var person = new Object();
+  person.firstName = "John";
+  person.lastName = "Doe";
+  person.age = 50;
+  person.eyeColor = "blue";
+
+

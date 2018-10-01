@@ -1,0 +1,8 @@
+var myObj = {
+    prop: 37,
+    testMethod: function () {
+        return this.prop;
+    }
+};
+
+console.log(myObj.testMethod()); // 37
